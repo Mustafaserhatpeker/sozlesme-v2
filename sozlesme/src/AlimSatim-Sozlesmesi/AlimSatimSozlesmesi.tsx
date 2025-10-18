@@ -262,13 +262,6 @@ function KiraSozlesmesi(): JSX.Element {
                         />
                         &nbsp;şeklinde paylaşılacaktır.
                     </p>
-                    <textarea
-                        className="as-textarea"
-                        placeholder="Diğer özel şartları buraya yazınız..."
-                        value={genelSartlar.ozelSartlarMetni}
-                        onChange={onChange("ozelSartlarMetni")}
-                        rows={5}
-                    />
                 </div>
 
                 <SignatureGrid size="compact" />

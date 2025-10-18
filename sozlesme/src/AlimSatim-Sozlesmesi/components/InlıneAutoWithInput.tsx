@@ -11,13 +11,6 @@ type InlineAutoWidthInputProps = Omit<
     extraPaddingPx?: number; // internal padding to add, default 6
 };
 
-/**
- * An inline input that auto-sizes to its content.
- * - Starts at minWidthPx (default 30px)
- * - On focus, increases width slightly by focusBumpPx (default 10px)
- * - No outline, border, or text decoration
- * - Inherits font properties from parent to perfectly match surrounding text
- */
 const InlineAutoWidthInput: React.FC<InlineAutoWidthInputProps> = ({
     className,
     value,
