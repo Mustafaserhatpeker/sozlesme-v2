@@ -121,3 +121,9 @@
 .as-inline-input::placeholder{
   color:rgba(0,0,0,0.35);
 }
+.as-clauses{
+  margin-top:2rem;
+}
+.as-clauses li{
+  margin-bottom:1rem;
+}
