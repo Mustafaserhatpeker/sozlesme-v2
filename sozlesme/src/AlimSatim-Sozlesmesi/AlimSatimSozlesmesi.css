@@ -1,136 +1,186 @@
-/* Container */
-.as-container {
-  max-width: 960px;
-  margin: 24px auto;
-  padding: 0 16px;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  color: #222;
+:root{
+  --max-width: 900px;
+  --card-bg: #ffffff;
+  --text: #111827;
+  --soft-border: #e5e7eb;
+  --muted-border: #e5e7eb;
+  --input-border: #9ca3af;
 }
 
-/* Cards / layout */
-.as-card {
-  background: #fff;
-  border: 1px solid #e6e6e6;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+/* Container */
+.as-container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:3rem 1rem;
+  gap:2rem;
+  min-height:100vh;
+  color: var(--text);
+  background:#fff;
+  box-sizing:border-box;
 }
-.as-card + .as-card {
-  margin-top: 20px;
+
+/* Card */
+.as-card{
+  width:100%;
+  max-width:var(--max-width);
+  background:var(--card-bg);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.08), 0 4px 6px -2px rgba(0,0,0,.04);
+  padding:2rem;
+  border-radius:4px;
+  box-sizing:border-box;
 }
-.as-card--spaced {
-  margin-bottom: 20px;
+
+/* Slightly less vertical padding when presented as compact section */
+.as-card--spaced{
+  padding:2rem;
 }
 
 /* Headings */
-.as-title {
-  font-size: 22px;
-  font-weight: 800;
-  text-align: center;
-  margin: 8px 0 18px;
-  letter-spacing: 0.4px;
-}
-.as-subtitle {
-  font-size: 16px;
-  font-weight: 700;
-  margin: 0 0 12px;
-  color: #333;
-}
-.as-section-title {
-  font-size: 14px;
-  font-weight: 700;
-  margin: 8px 0 12px;
-  color: #444;
+.as-title{
+  text-align:center;
+  font-size:1.5rem;
+  font-weight:700;
+  margin:0 0 1.25rem 0;
 }
 
-/* Box wrapper */
-.as-box {
-  border: 1px dashed #dcdcdc;
-  border-radius: 8px;
-  padding: 14px;
+.as-subtitle{
+  text-align:start;
+  font-size:1.25rem;
+  font-weight:700;
+  margin:0 0 1.25rem 0;
+  color:var(--text);
 }
 
-/* Groups and dividers */
-.as-group + .as-group {
-  margin-top: 12px;
-}
-.as-divider {
-  height: 1px;
-  background: #eee;
-  margin: 12px 0;
+.as-section-title{
+  font-size:1rem;
+  font-weight:700;
+  margin:0 0 0.75rem 0;
+  color:var(--text);
 }
 
-/* Form rows */
-.as-row {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 10px 14px;
-  align-items: center;
-  padding: 6px 0;
-}
-.as-label {
-  font-size: 13px;
-  color: #444;
-}
-.as-field {
-  width: 100%;
-}
-.as-input,
-.as-textarea {
-  width: 100%;
-  background: #fafafa;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 10px 12px;
-  font-size: 14px;
-  color: #222;
-  outline: none;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-}
-.as-input:focus,
-.as-textarea:focus {
-  background: #fff;
-  border-color: #a0c4ff;
-  box-shadow: 0 0 0 3px rgba(160, 196, 255, 0.25);
-}
-.as-textarea {
-  min-height: 80px;
-  resize: vertical;
+/* Info box */
+.as-box{
+ 
+  display:block;
 }
 
-/* Signature grid */
-.as-sign-grid {
-  display: grid;
-  gap: 10px;
-  margin-top: 20px;
-  color: #333;
-  font-weight: 600;
-}
-.as-sign-grid--large {
-  grid-template-columns: repeat(4, 1fr);
-}
-.as-sign-grid--compact {
-  grid-template-columns: repeat(3, 1fr);
-}
-.as-sign-grid > div {
-  border: 1px dashed #c8c8c8;
-  border-radius: 8px;
-  padding: 12px 10px;
-  text-align: center;
+/* Rows - (use flex, not CSS grid) */
+.as-row{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:stretch;
+  
 }
 
-/* Responsive */
-@media (max-width: 720px) {
-  .as-row {
-    grid-template-columns: 1fr;
+.as-row:first-child {
+  border-top: none;
+}
+
+/* Label */
+.as-label{
+  width:100%;
+  box-sizing:border-box;
+  padding:0.75rem;
+  font-size:0.9rem;
+  font-weight:500;
+  color:var(--text);
+}
+
+/* Field container */
+.as-field{
+  width:100%;
+ 
+  padding:1rem;
+  box-sizing:border-box;
+}
+
+/* Inputs */
+.as-input, .as-textarea{
+  font-family:inherit;
+  font-size:0.95rem;
+  color:var(--text);
+  padding:0.35rem 0.5rem;
+  border-radius:2px;
+  border:0;
+  background:transparent;
+  outline:none;
+  box-shadow:none;
+  width:100%;
+  box-sizing:border-box;
+}
+
+/* Textarea (multi-line fields) */
+.as-textarea{
+  min-height:140px;
+  resize:vertical;
+  display:block;
+  width:100%;
+  border:0;
+}
+
+/* Signature grids (keep grid only for the signature block) */
+.as-sign-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1rem;
+  text-align:center;
+  font-weight:600;
+  margin-top:2.25rem;
+  margin-bottom:4.5rem;
+}
+
+.as-sign-grid--large{
+  margin-top:3rem;
+  margin-bottom:6rem;
+}
+
+.as-sign-grid--compact{
+  grid-template-columns:repeat(3,1fr);
+  margin-top:4rem;
+  margin-bottom:3rem;
+}
+
+.as-sign-grid > div{
+ 
+  border-radius:4px;
+  padding:0.75rem;
+}
+
+/* Optional clauses list (kept for parity; not used if you don't render it) */
+.as-clauses{
+  list-style:decimal;
+  list-style-position:inside;
+  font-size:0.95rem;
+  line-height:1.6;
+  color:var(--text);
+  padding-left:1rem;
+  margin:0;
+}
+.as-clauses li{
+  margin-bottom:1.25rem;
+  padding-left:0.25rem;
+}
+
+/* Small/medium responsive behavior */
+@media (min-width:768px){
+  .as-label{ width:33.3333%; }
+  .as-field{ width:66.6667%; }
+
+  .as-row{
+    align-items:stretch;
   }
-  .as-label {
-    margin-bottom: 4px;
-  }
-  .as-sign-grid--large {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .as-sign-grid--compact {
-    grid-template-columns: 1fr;
-  }
+}
+
+/* Print friendliness */
+@media print{
+  body{ background:#fff; }
+  .as-card{ box-shadow:none; padding:1rem; }
+  .as-sign-grid{ page-break-inside:avoid; }
+}
+
+/* Utility */
+input[type="date"] {
+  padding-top:0.25rem;
+  padding-bottom:0.25rem;
 }

@@ -1,6 +1,13 @@
 import { useMemo, useReducer, type JSX } from "react";
 import "./AlimSatimSozlesmesi.css";
-import { BUSINESS_FIELDS, SELLER_FIELDS, BUYER_FIELDS, PROPERTY_FIELDS, ALL_FIELDS, type AllFieldKey } from "./fields";
+import {
+    BUSINESS_FIELDS,
+    SELLER_FIELDS,
+    BUYER_FIELDS,
+    PROPERTY_FIELDS,
+    ALL_FIELDS,
+    type AllFieldKey,
+} from "./fields";
 import FormRow from "./components/FormRow";
 import SignatureGrid from "./components/SignatureGrid";
 
@@ -37,7 +44,7 @@ function AlimSatimSozlesmesi(): JSX.Element {
                 dispatch({ type: "SET", key, value });
 
     return (
-        <main className="as-container">
+        <main className="as-container as-onepage">
             <header className="as-card as-card--spaced">
                 <h1 className="as-title">ALIM SATIMA ARACILIK SÖZLEŞMESİ</h1>
 
@@ -47,8 +54,10 @@ function AlimSatimSozlesmesi(): JSX.Element {
                         <FormRow
                             key={f.key}
                             label={f.label}
-                            type={'type' in f ? (f.type as any) : "text"}
-                            placeholder={'placeholder' in f ? f.placeholder as any : "Bilgi giriniz..."}
+                            type={"type" in f ? (f.type as any) : "text"}
+                            placeholder={
+                                "placeholder" in f ? (f.placeholder as any) : "Bilgi giriniz..."
+                            }
                             name={f.key}
                             value={form[f.key]}
                             onChange={setField(f.key)}
@@ -66,8 +75,10 @@ function AlimSatimSozlesmesi(): JSX.Element {
                         <FormRow
                             key={f.key}
                             label={f.label}
-                            type={'type' in f ? (f.type as any) : "text"}
-                            placeholder={'placeholder' in f ? f.placeholder : "Bilgi giriniz..."}
+                            type={"type" in f ? (f.type as any) : "text"}
+                            placeholder={
+                                "placeholder" in f ? f.placeholder : "Bilgi giriniz..."
+                            }
                             name={f.key}
                             value={form[f.key]}
                             onChange={setField(f.key)}
@@ -83,8 +94,10 @@ function AlimSatimSozlesmesi(): JSX.Element {
                         <FormRow
                             key={f.key}
                             label={f.label}
-                            type={'type' in f ? (f.type as any) : "text"}
-                            placeholder={'placeholder' in f ? f.placeholder : "Bilgi giriniz..."}
+                            type={"type" in f ? (f.type as any) : "text"}
+                            placeholder={
+                                "placeholder" in f ? f.placeholder : "Bilgi giriniz..."
+                            }
                             name={f.key}
                             value={form[f.key]}
                             onChange={setField(f.key)}
@@ -99,8 +112,10 @@ function AlimSatimSozlesmesi(): JSX.Element {
                     <FormRow
                         key={f.key}
                         label={f.label}
-                        type={'type' in f ? (f.type as any) : "text"}
-                        placeholder={'placeholder' in f ? f.placeholder : "Bilgi giriniz..."}
+                        type={"type" in f ? (f.type as any) : "text"}
+                        placeholder={
+                            "placeholder" in f ? f.placeholder : "Bilgi giriniz..."
+                        }
                         name={f.key}
                         value={form[f.key]}
                         onChange={setField(f.key)}
