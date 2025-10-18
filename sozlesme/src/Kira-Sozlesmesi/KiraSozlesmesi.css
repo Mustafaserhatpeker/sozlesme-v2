@@ -1,0 +1,174 @@
+
+.ks-container{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:3rem 1rem;
+  gap:2rem;
+  min-height:100vh;
+  color: black;
+}
+
+/* Card */
+.ks-card{
+  width:100%;
+  max-width:var(--max-width);
+  background:var(--card-bg);
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,.08), 0 4px 6px -2px rgba(0,0,0,.04);
+  padding:2rem;
+  border-radius:4px;
+  box-sizing:border-box;
+}
+
+/* Slightly less vertical padding when presented as compact section */
+.ks-card--spaced{
+  padding:2rem;
+}
+
+/* Headings */
+.ks-title{
+  text-align:center;
+  font-size:1.5rem;
+  font-weight:700;
+  margin:0 0 1.25rem 0;
+}
+
+.ks-subtitle{
+  text-align:center;
+  font-size:1.25rem;
+  font-weight:700;
+  margin:0 0 1.25rem 0;
+  color:var(--text);
+}
+
+/* Info box */
+.ks-box{
+  border:1px solid var(--soft-border);
+  display:block;
+}
+
+.ks-row{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:stretch;
+  border-top: 1px solid var(--muted-border);
+}
+
+.ks-row:first-child {
+  border-top: none;
+}
+
+/* Label */
+.ks-label{
+  width:100%;
+  box-sizing:border-box;
+  padding:0.75rem;
+  font-size:0.9rem;
+  font-weight:500;
+  color:var(--text);
+}
+
+/* Field container */
+.ks-field{
+  width:100%;
+  border-left:1px solid var(--muted-border);
+  padding:1rem;
+  box-sizing:border-box;
+}
+
+/* Inputs */
+.ks-input, .ks-textarea, .ks-inline{
+  font-family:inherit;
+  font-size:0.95rem;
+  color:var(--text);
+  padding:0.35rem 0.5rem;
+  border-radius:2px;
+  border:0;
+  background:transparent;
+  outline:none;
+  box-shadow:none;
+  width:100%;
+  box-sizing:border-box;
+}
+
+/* Textarea (last field) */
+.ks-textarea{
+  min-height:140px;
+  resize:vertical;
+  display:block;
+  width:100%;
+  border:0;
+}
+
+/* Inline small blanks inside clauses */
+.ks-inline{
+  display:inline-block;
+  width:6.5rem;
+  max-width:40%;
+  border-bottom:1px solid var(--input-border);
+  margin:0 0.35rem;
+  vertical-align:baseline;
+  padding:0.05rem 0.25rem;
+  font-size:0.95rem;
+}
+
+/* Signature grids */
+.ks-sign-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1rem;
+  text-align:center;
+  font-weight:600;
+  margin-top:2.25rem;
+  margin-bottom:4.5rem;
+}
+
+.ks-sign-grid--large{
+  margin-top:3rem;
+  margin-bottom:6rem;
+}
+
+.ks-sign-grid--compact{
+  margin-top:4rem;
+  margin-bottom:3rem;
+}
+
+/* Clauses */
+.ks-clauses{
+  list-style:decimal;
+  list-style-position:inside;
+  font-size:0.95rem;
+  line-height:1.6;
+  color:var(--text);
+  padding-left:1rem;
+  margin:0;
+}
+
+.ks-clauses li{
+  margin-bottom:1.25rem;
+  padding-left:0.25rem;
+}
+
+/* Small/medium responsive behavior */
+@media (min-width:768px){
+  .ks-label{ width:33.3333%; }
+  .ks-field{ width:66.6667%; }
+
+  .ks-row{
+    align-items:stretch;
+  }
+}
+
+/* Print friendliness */
+@media print{
+  body{ background:#fff; }
+  .ks-card{ box-shadow:none; padding:1rem; }
+  .ks-sign-grid{ page-break-inside:avoid; }
+  .ks-inline{ border-bottom-color:#000; }
+}
+
+/* Utility */
+input[type="date"] {
+  padding-top:0.25rem;
+  padding-bottom:0.25rem;
+}
