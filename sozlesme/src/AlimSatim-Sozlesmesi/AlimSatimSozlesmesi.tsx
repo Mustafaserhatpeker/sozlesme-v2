@@ -114,7 +114,7 @@ function KiraSozlesmesi(): JSX.Element {
                     </div>
                 </section>
                 <section className="as-section">
-                    <h2>Taşınmaz Bilgileri</h2>
+                    <h3>Taşınmaz Bilgileri</h3>
                     <ul className="as-section-ul">
                         <li className="as-section-li">
                             <span>Taşınmaz Cinsi: {tasinmazBilgileri.tasinmazCinsi}</span>
@@ -132,9 +132,9 @@ function KiraSozlesmesi(): JSX.Element {
                             <span>Mahalle/Köy: {tasinmazBilgileri.tasinmazMahalleKoy}</span>
                             <input type="text" placeholder="Bilgi Giriniz..." />
                         </li>
-                        <li className="as-section-li">
+                        <li className="as-section-li-textarea">
                             <span>Tapu Bilgileri: {tasinmazBilgileri.tasinmazTapuBilgileri}</span>
-                            <input type="text" placeholder="Bilgi Giriniz..." />
+                            <textarea placeholder="Bilgi Giriniz..." />
                         </li>
                     </ul>
                 </section>
