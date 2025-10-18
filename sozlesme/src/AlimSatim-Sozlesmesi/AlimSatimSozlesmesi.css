@@ -48,9 +48,23 @@
 }
 .as-section-li{
   margin-bottom:0.5rem;
+  align-items: center;
+  justify-content: center;
   line-height:1.6;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--muted-border);
   
+}
+.as-section-li span{
+  font-weight:600;
+  
+}
+.as-section-li input{
+  border: none;
+  border-left: 1px solid var(--muted-border);
+    padding: 1rem;
+    box-sizing: border-box;
 }

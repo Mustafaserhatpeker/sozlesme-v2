@@ -44,27 +44,27 @@ function KiraSozlesmesi(): JSX.Element {
                     <ul className="as-section-ul">
                         <li className="as-section-li">
                             <span>İşletme Adı Soyadı: {isletmeBilgileri.isletmeAdiSoyadi}</span>
-                            <input type="text" />
+                            <input type="text" placeholder="Bilgi Giriniz..." />
                         </li>
                         <li className="as-section-li">
                             <span>TC No: {isletmeBilgileri.isletmeTCNo}</span>
-                            <input type="text" />
+                            <input type="text" placeholder="Bilgi Giriniz..." />
                         </li>
                         <li className="as-section-li">
                             <span>Telefon: {isletmeBilgileri.isletmeTelefonu}</span>
-                            <input type="text" />
+                            <input type="text" placeholder="Bilgi Giriniz..." />
                         </li>
                         <li className="as-section-li">
                             <span>Unvan: {isletmeBilgileri.isletmeUnvani}</span>
-                            <input type="text" />
+                            <input type="text" placeholder="Bilgi Giriniz..." />
                         </li>
                         <li className="as-section-li">
                             <span>Adres: {isletmeBilgileri.isletmeAdresi}</span>
-                            <input type="text" />
+                            <input type="text" placeholder="Bilgi Giriniz..." />
                         </li>
                         <li className="as-section-li">
                             <span>Oda Sicil No: {isletmeBilgileri.isletmeOdaSicilNo}</span>
-                            <input type="text" />
+                            <input type="text" placeholder="Bilgi Giriniz..." />
                         </li>
                     </ul>
                 </section>
@@ -75,19 +75,19 @@ function KiraSozlesmesi(): JSX.Element {
                         <ul className="as-section-ul">
                             <li className="as-section-li">
                                 <span>Adı Soyadı: {saticiBilgileri.saticiAdiSoyadi}</span>
-                                <input type="text" />
+                                <input type="text" placeholder="Bilgi Giriniz..." />
                             </li>
                             <li className="as-section-li">
                                 <span>TC No: {saticiBilgileri.saticiTCNo}</span>
-                                <input type="text" />
+                                <input type="text" placeholder="Bilgi Giriniz..." />
                             </li>
                             <li className="as-section-li">
                                 <span>Telefon: {saticiBilgileri.saticiTelefonu}</span>
-                                <input type="text" />
+                                <input type="text" placeholder="Bilgi Giriniz..." />
                             </li>
                             <li className="as-section-li">
                                 <span>İkametgah: {saticiBilgileri.saticiIkametgah}</span>
-                                <input type="text" />
+                                <input type="text" placeholder="Bilgi Giriniz..." />
                             </li>
                         </ul>
                     </div>
@@ -96,19 +96,19 @@ function KiraSozlesmesi(): JSX.Element {
                         <ul className="as-section-ul">
                             <li className="as-section-li">
                                 <span>Adı Soyadı: {aliciBilgileri.aliciAdiSoyadi}</span>
-                                <input type="text" />
+                                <input type="text" placeholder="Bilgi Giriniz..." />
                             </li>
                             <li className="as-section-li">
                                 <span>TC No: {aliciBilgileri.aliciTCNo}</span>
-                                <input type="text" />
+                                <input type="text" placeholder="Bilgi Giriniz..." />
                             </li>
                             <li className="as-section-li">
                                 <span>Telefon: {aliciBilgileri.aliciTelefonu}</span>
-                                <input type="text" />
+                                <input type="text" placeholder="Bilgi Giriniz..." />
                             </li>
                             <li className="as-section-li">
                                 <span>İkametgah: {aliciBilgileri.aliciIkametgah}</span>
-                                <input type="text" />
+                                <input type="text" placeholder="Bilgi Giriniz..." />
                             </li>
                         </ul>
                     </div>
@@ -118,23 +118,23 @@ function KiraSozlesmesi(): JSX.Element {
                     <ul className="as-section-ul">
                         <li className="as-section-li">
                             <span>Taşınmaz Cinsi: {tasinmazBilgileri.tasinmazCinsi}</span>
-                            <input type="text" />
+                            <input type="text" placeholder="Bilgi Giriniz..." />
                         </li>
                         <li className="as-section-li">
                             <span>İl: {tasinmazBilgileri.tasinmazIl}</span>
-                            <input type="text" />
+                            <input type="text" placeholder="Bilgi Giriniz..." />
                         </li>
                         <li className="as-section-li">
                             <span>İlçe: {tasinmazBilgileri.tasinmazIlce}</span>
-                            <input type="text" />
+                            <input type="text" placeholder="Bilgi Giriniz..." />
                         </li>
                         <li className="as-section-li">
                             <span>Mahalle/Köy: {tasinmazBilgileri.tasinmazMahalleKoy}</span>
-                            <input type="text" />
+                            <input type="text" placeholder="Bilgi Giriniz..." />
                         </li>
                         <li className="as-section-li">
                             <span>Tapu Bilgileri: {tasinmazBilgileri.tasinmazTapuBilgileri}</span>
-                            <input type="text" />
+                            <input type="text" placeholder="Bilgi Giriniz..." />
                         </li>
                     </ul>
                 </section>
