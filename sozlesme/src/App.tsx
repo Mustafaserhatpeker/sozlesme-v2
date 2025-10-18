@@ -2,8 +2,8 @@
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './Home/Home'
-import KiraSozlesmesi from './Kira-Sozlesmesi/KiraSozlesmesi'
-import AlimSatimSozlesmesi from './AlimSatim-Sozlesmesi/AlimSatimSozlesmesi'
+import KiraSozlesmesi from './pages/Kira-Sozlesmesi/KiraSozlesmesi'
+import AlimSatimSozlesmesi from './pages/AlimSatim-Sozlesmesi/AlimSatimSozlesmesi'
 function App() {
 
   return (
