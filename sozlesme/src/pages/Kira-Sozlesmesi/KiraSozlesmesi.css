@@ -173,7 +173,7 @@
 
 /* Small/medium responsive behavior */
 @media (min-width:768px){
-  .ks-label{ width:33.3333%; }
+  .ks-label{ width:33.3333%; display: flex;justify-content: start; align-items: center; }
   .ks-field{ width:66.6667%; }
 
   .ks-row{
