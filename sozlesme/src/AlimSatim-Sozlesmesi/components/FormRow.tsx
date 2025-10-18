@@ -21,15 +21,15 @@ const FormRow = memo(function FormRow({
     const id = useId();
 
     return (
-        <div className="as-row">
-            <label className="as-label" htmlFor={id}>
+        <div className="ks-row">
+            <label className="ks-label" htmlFor={id}>
                 {label}
             </label>
-            <div className="as-field">
+            <div className="ks-field">
                 {type === "textarea" ? (
                     <textarea
                         id={id}
-                        className="as-textarea"
+                        className="ks-textarea"
                         placeholder={placeholder}
                         value={value}
                         onChange={(e) => onChange(e.target.value)}
@@ -39,7 +39,7 @@ const FormRow = memo(function FormRow({
                     <input
                         id={id}
                         type={type}
-                        className="as-input"
+                        className="ks-input"
                         placeholder={placeholder}
                         value={value}
                         onChange={(e) => onChange(e.target.value)}

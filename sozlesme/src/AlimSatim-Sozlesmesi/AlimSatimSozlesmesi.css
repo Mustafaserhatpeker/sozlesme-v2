@@ -1,27 +1,16 @@
-:root{
-  --max-width: 900px;
-  --card-bg: #ffffff;
-  --text: #111827;
-  --soft-border: #e5e7eb;
-  --muted-border: #e5e7eb;
-  --input-border: #9ca3af;
-}
 
-/* Container */
-.as-container{
+.ks-container{
   display:flex;
   flex-direction:column;
   align-items:center;
   padding:3rem 1rem;
   gap:2rem;
   min-height:100vh;
-  color: var(--text);
-  background:#fff;
-  box-sizing:border-box;
+  color: black;
 }
 
 /* Card */
-.as-card{
+.ks-card{
   width:100%;
   max-width:var(--max-width);
   background:var(--card-bg);
@@ -32,53 +21,45 @@
 }
 
 /* Slightly less vertical padding when presented as compact section */
-.as-card--spaced{
+.ks-card--spaced{
   padding:2rem;
 }
 
 /* Headings */
-.as-title{
+.ks-title{
   text-align:center;
   font-size:1.5rem;
   font-weight:700;
   margin:0 0 1.25rem 0;
 }
 
-.as-subtitle{
-  text-align:start;
+.ks-subtitle{
+  text-align:center;
   font-size:1.25rem;
   font-weight:700;
   margin:0 0 1.25rem 0;
   color:var(--text);
 }
 
-.as-section-title{
-  font-size:1rem;
-  font-weight:700;
-  margin:0 0 0.75rem 0;
-  color:var(--text);
-}
-
 /* Info box */
-.as-box{
- 
+.ks-box{
+  border:1px solid var(--soft-border);
   display:block;
 }
 
-/* Rows - (use flex, not CSS grid) */
-.as-row{
+.ks-row{
   display:flex;
   flex-wrap:wrap;
   align-items:stretch;
-  
+  border-top: 1px solid var(--muted-border);
 }
 
-.as-row:first-child {
+.ks-row:first-child {
   border-top: none;
 }
 
 /* Label */
-.as-label{
+.ks-label{
   width:100%;
   box-sizing:border-box;
   padding:0.75rem;
@@ -88,15 +69,15 @@
 }
 
 /* Field container */
-.as-field{
+.ks-field{
   width:100%;
- 
+  border-left:1px solid var(--muted-border);
   padding:1rem;
   box-sizing:border-box;
 }
 
 /* Inputs */
-.as-input, .as-textarea{
+.ks-input, .ks-textarea, .ks-inline{
   font-family:inherit;
   font-size:0.95rem;
   color:var(--text);
@@ -110,8 +91,8 @@
   box-sizing:border-box;
 }
 
-/* Textarea (multi-line fields) */
-.as-textarea{
+/* Textarea (last field) */
+.ks-textarea{
   min-height:140px;
   resize:vertical;
   display:block;
@@ -119,8 +100,20 @@
   border:0;
 }
 
-/* Signature grids (keep grid only for the signature block) */
-.as-sign-grid{
+/* Inline small blanks inside clauses */
+.ks-inline{
+  display:inline-block;
+  width:6.5rem;
+  max-width:40%;
+  border-bottom:1px solid var(--input-border);
+  margin:0 0.35rem;
+  vertical-align:baseline;
+  padding:0.05rem 0.25rem;
+  font-size:0.95rem;
+}
+
+/* Signature grids */
+.ks-sign-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:1rem;
@@ -130,25 +123,18 @@
   margin-bottom:4.5rem;
 }
 
-.as-sign-grid--large{
+.ks-sign-grid--large{
   margin-top:3rem;
   margin-bottom:6rem;
 }
 
-.as-sign-grid--compact{
-  grid-template-columns:repeat(3,1fr);
+.ks-sign-grid--compact{
   margin-top:4rem;
   margin-bottom:3rem;
 }
 
-.as-sign-grid > div{
- 
-  border-radius:4px;
-  padding:0.75rem;
-}
-
-/* Optional clauses list (kept for parity; not used if you don't render it) */
-.as-clauses{
+/* Clauses */
+.ks-clauses{
   list-style:decimal;
   list-style-position:inside;
   font-size:0.95rem;
@@ -157,17 +143,18 @@
   padding-left:1rem;
   margin:0;
 }
-.as-clauses li{
+
+.ks-clauses li{
   margin-bottom:1.25rem;
   padding-left:0.25rem;
 }
 
 /* Small/medium responsive behavior */
 @media (min-width:768px){
-  .as-label{ width:33.3333%; }
-  .as-field{ width:66.6667%; }
+  .ks-label{ width:33.3333%; }
+  .ks-field{ width:66.6667%; }
 
-  .as-row{
+  .ks-row{
     align-items:stretch;
   }
 }
@@ -175,8 +162,9 @@
 /* Print friendliness */
 @media print{
   body{ background:#fff; }
-  .as-card{ box-shadow:none; padding:1rem; }
-  .as-sign-grid{ page-break-inside:avoid; }
+  .ks-card{ box-shadow:none; padding:1rem; }
+  .ks-sign-grid{ page-break-inside:avoid; }
+  .ks-inline{ border-bottom-color:#000; }
 }
 
 /* Utility */
