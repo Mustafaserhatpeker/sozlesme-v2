@@ -1,0 +1,136 @@
+/* Container */
+.as-container {
+  max-width: 960px;
+  margin: 24px auto;
+  padding: 0 16px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #222;
+}
+
+/* Cards / layout */
+.as-card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+.as-card + .as-card {
+  margin-top: 20px;
+}
+.as-card--spaced {
+  margin-bottom: 20px;
+}
+
+/* Headings */
+.as-title {
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+  margin: 8px 0 18px;
+  letter-spacing: 0.4px;
+}
+.as-subtitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: #333;
+}
+.as-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 8px 0 12px;
+  color: #444;
+}
+
+/* Box wrapper */
+.as-box {
+  border: 1px dashed #dcdcdc;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+/* Groups and dividers */
+.as-group + .as-group {
+  margin-top: 12px;
+}
+.as-divider {
+  height: 1px;
+  background: #eee;
+  margin: 12px 0;
+}
+
+/* Form rows */
+.as-row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 10px 14px;
+  align-items: center;
+  padding: 6px 0;
+}
+.as-label {
+  font-size: 13px;
+  color: #444;
+}
+.as-field {
+  width: 100%;
+}
+.as-input,
+.as-textarea {
+  width: 100%;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #222;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.as-input:focus,
+.as-textarea:focus {
+  background: #fff;
+  border-color: #a0c4ff;
+  box-shadow: 0 0 0 3px rgba(160, 196, 255, 0.25);
+}
+.as-textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* Signature grid */
+.as-sign-grid {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+  color: #333;
+  font-weight: 600;
+}
+.as-sign-grid--large {
+  grid-template-columns: repeat(4, 1fr);
+}
+.as-sign-grid--compact {
+  grid-template-columns: repeat(3, 1fr);
+}
+.as-sign-grid > div {
+  border: 1px dashed #c8c8c8;
+  border-radius: 8px;
+  padding: 12px 10px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .as-row {
+    grid-template-columns: 1fr;
+  }
+  .as-label {
+    margin-bottom: 4px;
+  }
+  .as-sign-grid--large {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .as-sign-grid--compact {
+    grid-template-columns: 1fr;
+  }
+}
