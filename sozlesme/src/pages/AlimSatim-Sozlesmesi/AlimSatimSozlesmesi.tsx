@@ -1,7 +1,7 @@
 import { useState, type JSX, type ChangeEvent } from "react";
 import "./AlimSatimSozlesmesi.css";
-import SignatureGrid from "./components/SıgnatureGrid";
-import InlineAutoWidthInput from "./components/InlıneAutoWithInput";
+import SignatureGrid from "./components/SignatureGrid";
+import InlineAutoWidthInput from "./components/InlineAutoWithInput";
 
 function KiraSozlesmesi(): JSX.Element {
     // Form states (üst kısım)

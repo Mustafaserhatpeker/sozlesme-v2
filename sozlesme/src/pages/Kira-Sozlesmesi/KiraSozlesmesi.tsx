@@ -1,8 +1,8 @@
 import { useMemo, useReducer, type JSX } from "react";
 import "./KiraSozlesmesi.css";
 import FormRow from "./components/FormRow";
-import InlineInput from "./components/InlıneInput";
-import SignatureGrid from "./components/SıgnatureGrid";
+import InlineInput from "./components/InlineInput";
+import SignatureGrid from "./components/SignatureGrid";
 import { INFO_FIELDS, type InfoFieldKey } from "./fields";
 
 type InlineKeys =
