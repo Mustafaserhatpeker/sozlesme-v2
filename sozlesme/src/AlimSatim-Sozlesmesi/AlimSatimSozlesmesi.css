@@ -1,4 +1,3 @@
-
 .as-container{
   display:flex;
   flex-direction:column;
@@ -48,7 +47,6 @@
 .as-section-ul{
   list-style-type: none;
   padding-left:1.5rem;
-
 }
 .as-section-li{
   margin-bottom:0.5rem;
@@ -60,7 +58,6 @@
   gap: 0.5rem;
   padding: 0.5rem;
   border-bottom: 1px solid var(--muted-border);
-  
 }
 .as-section-li-textarea{
   margin-bottom:0.5rem;
@@ -75,7 +72,6 @@
 }
 .as-section-li-textarea span{
   font-weight:600;
-  
 }
 .as-section-li-textarea textarea{
   border: none;
@@ -88,7 +84,6 @@
 }
 .as-section-li span{
   font-weight:600;
-  
 }
 .as-section-li input{
   border: none;
@@ -96,4 +91,33 @@
   padding: 1rem;
   box-sizing: border-box;
   outline: none;
+}
+
+/* Genel Şartlar inline inputları:
+   - içerik kadar genişler
+   - odakta hafif genişler
+   - outline/border/text-decoration yok
+   - çevre metinle aynı font ve boyut */
+.as-inline-input{
+  display:inline-block;
+  vertical-align:baseline;
+  width:auto;            /* gerçek genişlik JS ile ayarlanır */
+  min-width:30px;        /* başlangıç 30px */
+  max-width:100%;        /* satırda taşmamak için */
+  border:none;
+  outline:none;
+  background:transparent;
+  padding:0 0.25rem;     /* biraz nefes payı */
+  font:inherit;          /* yazı tipi ve boyut tutarlı */
+  line-height:inherit;
+  letter-spacing:inherit;
+  color:inherit;
+  text-decoration:none;
+  caret-color:currentColor;
+  transition:width 120ms ease;
+}
+
+/* placeholder rengi yumuşak olsun */
+.as-inline-input::placeholder{
+  color:rgba(0,0,0,0.35);
 }

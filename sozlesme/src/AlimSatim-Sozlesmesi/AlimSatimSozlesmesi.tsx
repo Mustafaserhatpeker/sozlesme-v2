@@ -1,6 +1,7 @@
-import { useState, type JSX } from "react";
+import { useState, type JSX, type ChangeEvent } from "react";
 import "./AlimSatimSozlesmesi.css";
 import SignatureGrid from "./components/SıgnatureGrid";
+import InlineAutoWidthInput from "./components/InlıneAutoWithInput";
 
 function KiraSozlesmesi(): JSX.Element {
     // Form states (üst kısım)
@@ -35,27 +36,20 @@ function KiraSozlesmesi(): JSX.Element {
         tasinmazTapuBilgileri: "",
     });
 
-    // GENEL ŞARTLAR içindeki "....." alanlarının kullanıcı tarafından doldurulabilmesi için state
+    // GENEL ŞARTLAR içindeki "....." alanları için state
     const [genelSartlar, setGenelSartlar] = useState({
-        // 1. madde
         satisBedeliTL: "",
         hizmetBedeliTutar: "",
-
-        // 3. madde (Mülk Sahibi ve/veya Alıcı kusurundan doğan cezai şart tutarları)
         cezaiTutarMulksahibi: "",
         cezaiTutarAlici: "",
-
-        // 4. madde (Yetkili mahkeme/yer)
         yetkiliMahkemeYeri: "",
-
-        // Özel şartlar
         masrafPaylasimSekli: "",
         ozelSartlarMetni: "",
     });
 
     const onChange =
         (key: keyof typeof genelSartlar) =>
-            (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+            (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
                 setGenelSartlar((prev) => ({ ...prev, [key]: e.target.value }));
             };
 
@@ -174,7 +168,7 @@ function KiraSozlesmesi(): JSX.Element {
             <div className="as-contract">
                 <h1 className="as-title">GENEL ŞARTLAR</h1>
 
-                {/* Giriş paragrafı (fotodaki metne göre) */}
+                {/* Giriş paragrafı */}
                 <p className="as-preamble">
                     Yukarıda yazılı taraflar arasında, yukarıda özellikleri gösterilmiş bulunan gayrimenkulün
                     satılması ile ilgili olarak İşletme, Mülk Sahibi ve Alıcı arasında aşağıda yazılı şartlarla
@@ -183,24 +177,22 @@ function KiraSozlesmesi(): JSX.Element {
 
                 <ol className="as-clauses">
                     <li>
-                        İşletme, işbu Hizmet Bedeli akdi ile akdin konusu olan gayrimenkule,&nbsp;
-                        <input
-                            className="as-inline-input"
-                            type="text"
+                        İşletme, işbu Hizmet Bedeli akdi ile akdin konusu olan gayrimenkule&nbsp;
+                        <InlineAutoWidthInput
                             placeholder="........ TL"
                             value={genelSartlar.satisBedeliTL}
-                            onChange={onChange("satisBedeliTL")}
+                            onChange={onChange("satisBedeliTL") as (e: ChangeEvent<HTMLInputElement>) => void}
+                            aria-label="Satış bedeli (TL)"
                         />
                         &nbsp;satış bedeli karşılığı alıcı bulmak üzere pazarlama faaliyetlerini yapmak ve bu
                         mesleki faaliyeti sonucunda Mülk Sahibi ile Alıcı arasında satış akdinin kurulmasını
                         temin etmek görevini üstlenmiştir. Buna karşılık Mülk Sahibi ve Alıcı, bu hizmet
                         karşılığında İşletme&apos;ye, satış bedelinin toplamda&nbsp;
-                        <input
-                            className="as-inline-input"
-                            type="text"
+                        <InlineAutoWidthInput
                             placeholder="........"
                             value={genelSartlar.hizmetBedeliTutar}
-                            onChange={onChange("hizmetBedeliTutar")}
+                            onChange={onChange("hizmetBedeliTutar") as (e: ChangeEvent<HTMLInputElement>) => void}
+                            aria-label="Hizmet bedeli oran/tutar"
                         />
                         &nbsp;+ KDV tutarına karşılık gelen meblağı Hizmet Bedeli ücreti olarak ödemeyi kabul ve
                         taahhüt eder.
@@ -221,24 +213,22 @@ function KiraSozlesmesi(): JSX.Element {
                         akit yapmak istemesi veya kendisinin satmak istemesi ve bunlarla sınırlı olmaksızın Mülk
                         Sahibi&apos;nin kendi kusuru nedeniyle işbu sözleşmenin ifa edilememesi hallerinde; İşletme&apos;ye
                         satış bedelinin toplamda&nbsp;
-                        <input
-                            className="as-inline-input"
-                            type="text"
+                        <InlineAutoWidthInput
                             placeholder="........"
                             value={genelSartlar.cezaiTutarMulksahibi}
-                            onChange={onChange("cezaiTutarMulksahibi")}
+                            onChange={onChange("cezaiTutarMulksahibi") as (e: ChangeEvent<HTMLInputElement>) => void}
+                            aria-label="Mülk sahibi cezai şart"
                         />
                         &nbsp;+ KDV tutarına karşılık gelen meblağı cezai şart olarak ödemeyi kabul ve taahhüt
                         eder. Alıcı, işbu sözleşmenin taraflarca imzalanmasından sonra bu akdin konusu olan
                         gayrimenkulü satın almaktan vazgeçmesi ve/veya Alıcı&apos;nın kusuru nedeniyle işbu
                         sözleşmenin hiç veya gereği gibi ifa edilememesi halinde; İşletme&apos;ye satış bedelinin
                         toplamda&nbsp;
-                        <input
-                            className="as-inline-input"
-                            type="text"
+                        <InlineAutoWidthInput
                             placeholder="........"
                             value={genelSartlar.cezaiTutarAlici}
-                            onChange={onChange("cezaiTutarAlici")}
+                            onChange={onChange("cezaiTutarAlici") as (e: ChangeEvent<HTMLInputElement>) => void}
+                            aria-label="Alıcı cezai şart"
                         />
                         &nbsp;+ KDV tutarına karşılık gelen meblağı cezai şart olarak ödemeyi kabul ve taahhüt
                         eder.
@@ -248,12 +238,11 @@ function KiraSozlesmesi(): JSX.Element {
                         İşbu akid yukarıda yazılı şartlar ve ayrıca aşağıda belirtilecek özel şartlarla birlikte
                         geçerli olmak üzere karşılıklı olarak kabul ve taahhüt edilmiştir. İşbu akid ile ilgili
                         doğabilecek ihtilaflarda&nbsp;
-                        <input
-                            className="as-inline-input"
-                            type="text"
+                        <InlineAutoWidthInput
                             placeholder="........ (ör. İstanbul)"
                             value={genelSartlar.yetkiliMahkemeYeri}
-                            onChange={onChange("yetkiliMahkemeYeri")}
+                            onChange={onChange("yetkiliMahkemeYeri") as (e: ChangeEvent<HTMLInputElement>) => void}
+                            aria-label="Yetkili mahkeme/yer"
                         />
                         &nbsp;Mahkemeleri ve İcra Daireleri yetkilidir. Taraflar isterse, uyuşmazlığın çözümü
                         için arabuluculuk gibi alternatif çözüm yollarına başvurabilir.
@@ -265,12 +254,11 @@ function KiraSozlesmesi(): JSX.Element {
                     <p>
                         İşletme&apos;nin bu akitten kaynaklanan hizmeti yerine getirirken yapacağı masraflar (tapu
                         harcı, döner sermaye hizmet bedeli, vb.) İş Sahibi ve Alıcı arasında&nbsp;
-                        <input
-                            className="as-inline-input"
-                            type="text"
+                        <InlineAutoWidthInput
                             placeholder="........ (ör. %50 - %50)"
                             value={genelSartlar.masrafPaylasimSekli}
-                            onChange={onChange("masrafPaylasimSekli")}
+                            onChange={onChange("masrafPaylasimSekli") as (e: ChangeEvent<HTMLInputElement>) => void}
+                            aria-label="Masraf paylaşım şekli"
                         />
                         &nbsp;şeklinde paylaşılacaktır.
                     </p>
