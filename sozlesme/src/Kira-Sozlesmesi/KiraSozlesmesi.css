@@ -90,7 +90,29 @@
   width:100%;
   box-sizing:border-box;
 }
+.ks-inline{
+  display:inline-block;
+  vertical-align:baseline;
+  width:auto;            /* gerçek genişlik JS ile ayarlanır */
+  min-width:30px;        /* başlangıç 30px */
+  max-width:100%;
+  border:none;
+  outline:none;
+  background:transparent;
+  padding:0 0.25rem;     /* az nefes payı */
+  font:inherit;          /* yazı tipi ve boyutu metinle aynı */
+  line-height:inherit;
+  letter-spacing:inherit;
+  color:inherit;
+  text-decoration:none;
+  caret-color:currentColor;
+  transition:width 120ms ease;
+}
 
+/* Placeholder rengi yumuşak */
+.ks-inline::placeholder{
+  color:rgba(0,0,0,0.35);
+}
 /* Textarea (last field) */
 .ks-textarea{
   min-height:140px;

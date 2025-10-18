@@ -181,7 +181,7 @@ function KiraSozlesmesi(): JSX.Element {
                     </li>
                 </ol>
 
-                <SignatureGrid size="compact" />
+                <SignatureGrid size="large" />
             </section>
         </main>
     );
