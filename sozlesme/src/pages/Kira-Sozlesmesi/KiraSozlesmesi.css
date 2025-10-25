@@ -73,6 +73,8 @@
   width:100%;
   border-left:1px solid var(--muted-border);
   padding:1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
   box-sizing:border-box;
 }
 
@@ -147,7 +149,7 @@
 
 .ks-sign-grid--large{
   margin-top:3rem;
-  margin-bottom:6rem;
+  margin-bottom:12rem;
 }
 
 .ks-sign-grid--compact{
@@ -193,4 +195,17 @@
 input[type="date"] {
   padding-top:0.25rem;
   padding-bottom:0.25rem;
+}
+
+.pdf-download-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 18px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 999;
 }
