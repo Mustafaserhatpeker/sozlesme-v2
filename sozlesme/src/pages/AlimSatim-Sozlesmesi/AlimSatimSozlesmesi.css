@@ -56,12 +56,11 @@
 .as-section-li{
   align-items: center;
   justify-content: center;
-  line-height:1.6;
+  line-height:auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 0.5rem;
   padding: 0.5rem;
-  padding-bottom: 0;
   padding-top: 0;
 
   border-bottom: 1px solid var(--muted-border);
@@ -70,7 +69,7 @@
   margin-bottom:0.5rem;
   align-items: center;
   justify-content: center;
-  line-height:1.6;
+  line-height:auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 0.5rem;
@@ -99,7 +98,13 @@
   box-sizing: border-box;
   outline: none;
 }
-
+.as-section-li input,
+.as-section-li-textarea textarea {
+    padding: 0.6rem 1rem; /* Yukarı-aşağı daha rahat */
+    line-height: 1.4; /* Yazı sıkışmasını önler */
+    box-sizing: border-box;
+    height: auto;
+}
 /* Genel Şartlar inline inputları:
    - içerik kadar genişler
    - odakta hafif genişler
