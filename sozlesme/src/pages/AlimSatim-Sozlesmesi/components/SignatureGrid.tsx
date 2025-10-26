@@ -9,7 +9,7 @@ type Props = {
 };
 
 export default function SignatureGrid({ size = "large" }: Props): JSX.Element {
-    const className = `ks-sign-grid ${size === "large" ? "ks-sign-grid--large" : size === "largev2" ? "ks-sign-grid--largev2" : "ks-sign-grid--compact"
+    const className = `as-sign-grid ${size === "large" ? "as-sign-grid--large" : size === "largev2" ? "as-sign-grid--largev2" : "as-sign-grid--compact"
         }`;
 
     return (

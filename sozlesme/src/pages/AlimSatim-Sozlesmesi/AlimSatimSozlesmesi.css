@@ -22,9 +22,28 @@
   font-weight:700;
   margin:0 0 1.25rem 0;
 }
-.ks-sign-grid--largev2{
-  margin-top:40rem;
+.as-sign-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1rem;
+  text-align:center;
+  font-weight:600;
+  margin-top:2.25rem;
+  margin-bottom:4.5rem;
+}
+
+.as-sign-grid--large{
+  margin-top:3rem;
+  margin-bottom:12rem;
+}
+.as-sign-grid--largev2{
+  margin-top:42rem;
   margin-bottom:8rem;
+}
+
+.as-sign-grid--compact{
+  margin-top:4rem;
+  margin-bottom:3rem;
 }
 
 .as-section{
