@@ -2,7 +2,7 @@ import type { JSX } from "react";
 
 const labels = ["MAL SAHİBİ", "1. KEFİL", "2. KEFİL", "KİRACI"] as const;
 
-type Size = "large" | "compact";
+type Size = "large" | "compact" | "largev2";
 
 type Props = {
     size?: Size;
