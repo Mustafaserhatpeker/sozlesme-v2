@@ -219,7 +219,7 @@ function KiraSozlesmesi(): JSX.Element {
                         </li>
                     </ol>
 
-                    <SignatureGrid size="large" />
+                    <SignatureGrid size="largev2" />
                 </section>
             </div>
             <button
