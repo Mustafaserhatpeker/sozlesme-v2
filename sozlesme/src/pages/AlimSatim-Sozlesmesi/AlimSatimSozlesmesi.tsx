@@ -301,7 +301,7 @@ function KiraSozlesmesi(): JSX.Element {
                         </p>
                     </div>
 
-                    <SignatureGrid size="large" />
+                    <SignatureGrid size="largev2" />
                 </div>
                 <button
                     className="pdf-download-btn"
