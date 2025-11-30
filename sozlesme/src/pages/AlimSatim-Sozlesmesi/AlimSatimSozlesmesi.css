@@ -24,7 +24,7 @@
 }
 .as-sign-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:1rem;
   text-align:center;
   font-weight:600;
@@ -37,8 +37,8 @@
   margin-bottom:12rem;
 }
 .as-sign-grid--largev2{
-  margin-top:42rem;
-  margin-bottom:8rem;
+  margin-top:32rem;
+  margin-bottom:12rem;
 }
 
 .as-sign-grid--compact{

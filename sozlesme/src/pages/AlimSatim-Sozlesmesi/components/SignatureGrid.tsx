@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 
-const labels = ["MAL SAHİBİ", "1. KEFİL", "2. KEFİL", "KİRACI"] as const;
+const labels = ["SATICI", "ARACI KURUM YA DA KİŞİ", "ALICI"] as const;
 
 type Size = "large" | "compact" | "largev2";
 
