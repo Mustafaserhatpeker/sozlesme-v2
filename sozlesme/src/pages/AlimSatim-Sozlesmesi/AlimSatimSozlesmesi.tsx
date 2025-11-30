@@ -81,6 +81,7 @@ function KiraSozlesmesi(): JSX.Element {
         yetkiliMahkemeYeri: "",
         masrafPaylasimSekli: "",
         ozelSartlarMetni: "",
+        kaporaBedeli: "",
     });
 
     const onChange =
@@ -283,6 +284,16 @@ function KiraSozlesmesi(): JSX.Element {
                             />
                             &nbsp;Mahkemeleri ve İcra Daireleri yetkilidir. Taraflar isterse, uyuşmazlığın çözümü
                             için arabuluculuk gibi alternatif çözüm yollarına başvurabilir.
+                        </li>
+                        <li>
+                            İşbu sözleşme gereği bahsi geçen taşınmazın satış kapora bedeli olarak&nbsp;
+                            <InlineAutoWidthInput
+                                placeholder="........"
+                                value={genelSartlar.kaporaBedeli}
+                                onChange={onChange("kaporaBedeli") as (e: ChangeEvent<HTMLInputElement>) => void}
+                                aria-label="Kapora bedeli"
+                            />
+                            &nbsp;alınmıştır. Taraflar arasında keyfi olarak cayma durumunda kapora bedeli geri ödenmeyecektir.
                         </li>
                     </ol>
 
